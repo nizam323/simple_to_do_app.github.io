@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <script src="https://kit.fontawesome.com/1cb608260b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: #f0d857;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.con {
+            background-color: #ef2f45;
+            height: 500px;
+            width: 500px;
+            border-radius: 33px;
+            border: 2px dashed tomato;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        input {
+            width: 80%;
+            height: 40px;
+            padding: 5px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        input::placeholder {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        button {
+            text-transform: uppercase;
+            background-color: lightgrey;
+            width: 80%;
+            height: 40px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            border: 1px solid;
+            border-radius: 4px;
+            transition: background-color .5s ease;
+        }
+
+        button:hover {
+            background-color: rgba(211, 211, 211, 0.856);
+        }
+
+        div.content {
+            background-color: white;
+            height: 250px;
+            width: 80%;
+            border-radius: 4px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            overflow: scroll;
+        }
+
+        ul {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 20px;
+            border-bottom: 1px solid;
+        }
+
+        li {
+            margin: 10px 0;
+            list-style: auto;
+            font-weight: 600;
+            text-transform: capitalize;
+            letter-spacing: 1.5px;
+            word-wrap: break-word;
+        }
+
+        .sp {
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        i:hover {
+            color: red;
+            transition: color .5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <h1 style="color: lightyellow;">To Do List</h1>
+        <br>
+        <input type="text" placeholder="write to do here" id="inp">
+        <br>
+        <button id="btn">add</button>
+        <br>
+        <div class="content"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
